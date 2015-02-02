@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<g:set var="pageTitle" value="Dashboard" />
+<sec:ifAllGranted roles="ROLE_ADMIN">
+	<g:set var="pageTitle" value="IDEA Administrator Dashboard" />
+</sec:ifAllGranted>
+<sec:ifAllGranted roles="ROLE_STAFF">
+	<g:set var="pageTitle" value="IDEA Staff Dashboard" />
+</sec:ifAllGranted>
+
 <html>
 	<head>
 		<meta name="layout" content="idea"/>
