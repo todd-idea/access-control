@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<meta name="layout" content="idea"/>
 		<title>Administration Dashboard</title>
 	</head>
 

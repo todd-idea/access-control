@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<meta name="layout" content="idea"/>
-		<title>Staff Dashboard</title>
+		<title>Dashboard - IDEA Feedback Systems</title>
 	</head>
 
 	<body>
-		<h1>Staff Dashboard</h1>
+		<h1>Dashboard</h1>
 		<p>
-			This is what a staff member will see.
+			This is a dashboard.
 		</p>
 	</body>
 </html>
