@@ -75,9 +75,9 @@
 		        			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog" title="System Admin Tools"></i></a>
 		        			<ul class="dropdown-menu">
 		        				<li><a href="#">Grails Admin</a></li>
-		        				<li><a href="/console">Grails Console</a></li>
+		        				<li><g:link controller="console">Grails Console</g:link></li>
 		        				<li><a href="#">Quartz</a></li>
-		        				<li><a href="/dbconsole">DB Console</a></li>
+		        				<li><g:link controller="dbconsole">DB Console</g:link></li>
 		        			</ul>
 		        		</li>
 		        		<li><a href="#"><i class="glyphicon glyphicon-wrench"></i></a></li>

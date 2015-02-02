@@ -134,3 +134,4 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/console/**':                    ['permitAll'],
     '/plugins/console*/**':           ['permitAll']
 ]
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = "/dashboard"
