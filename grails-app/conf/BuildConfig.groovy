@@ -62,6 +62,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.1.8'
         compile ":asset-pipeline:1.9.9"
         compile ':spring-security-core:2.0-RC4'
+        compile ":spring-security-ui:1.0-RC2"
         compile ":twitter-bootstrap:3.3.2.1"
         compile ":console:1.5.3"
 
@@ -69,6 +70,8 @@ grails.project.dependency.resolution = {
         runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
+        runtime ":jquery-ui:1.10.4"
+        runtime ":famfamfam:1.0.1"
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"

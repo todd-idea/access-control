@@ -2,14 +2,16 @@
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
 
-// grails.config.locations = [ "classpath:${appName}-config.properties",
-//                             "classpath:${appName}-config.groovy",
-//                             "file:${userHome}/.grails/${appName}-config.properties",
-//                             "file:${userHome}/.grails/${appName}-config.groovy"]
+grails.config.locations = [
+        "classpath:${appName}-config.properties",
+        "classpath:${appName}-config.groovy",
+        "file:${userHome}/.grails/${appName}-config.properties",
+        "file:${userHome}/.grails/${appName}-config.groovy"
+]
 
-// if (System.properties["${appName}.config.location"]) {
-//    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
-// }
+if (System.properties["${appName}.config.location"]) {
+    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
+}
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 
@@ -125,6 +127,11 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
+    '/user/**':                       ['permitAll'],
+    '/register/**':                   ['permitAll'],
+    '/role/**':                       ['permitAll'],
+    '/registrationCode/**':           ['permitAll'],
+    '/securityInfo/**':               ['permitAll'],
 	'/assets/**':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
@@ -135,3 +142,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/plugins/console*/**':           ['permitAll']
 ]
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = "/dashboard"
+
+//grails.plugin.springsecurity.ui.forgotPassword.emailBody = "Looks like you forgot your password. Oops!"
+grails.plugin.springsecurity.ui.forgotPassword.emailFrom = "someFool@google.com"
+//grails.plugin.springsecurity.ui.forgotPassword.emailSubject = "Password Reset"
+grails.plugin.springsecurity.ui.register.postResetUrl = "/login/auth"

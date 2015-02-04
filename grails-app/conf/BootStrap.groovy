@@ -16,12 +16,12 @@ class BootStrap {
 		def staffRole = new Role(authority: 'ROLE_STAFF').save(flush: true)
 
 		// Create an example Admin user
-		def todd = new User(username: 'todd', password: 'tool13')
+		def todd = new User(username: 'todd', password: 'tool13', email: "todd@wallentine.com")
 		todd.save(flush: true)
 		UserRole.create todd, adminRole, true
 
 		// Create an example Staff user
-		def kari = new User(username: 'kari', password: 'tool13')
+		def kari = new User(username: 'kari', password: 'tool13', email: "todd.wallentine@gmail.com")
 		kari.save(flush: true)
 		UserRole.create kari, staffRole, true
     }
