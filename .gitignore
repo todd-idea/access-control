@@ -28,3 +28,6 @@
 
 # "temporary" build files
 /target
+
+# ignore the Grails local configuration over-rides
+/access-control-config.groovy
